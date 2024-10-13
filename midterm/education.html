@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/education_style.css">
+    <title>Family</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/index/logo.svg" alt="Logo"></a>
+                </div>
+                <div class="burger__menu">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="family.html">Family</a></li>
+                            <li><a href="education.html">Education</a></li>
+                            <li><a href="hobby.html">Hobbies</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nav__wrapper">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="family.html">Family</a></li>
+                            <li><a href="education.html">Education</a></li>
+                            <li><a href="hobby.html">Hobbies</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-education">
+        <div class="container">
+            <div class="education__wrapper">
+                <div class="title"> 
+                    <h1>My Education</h1>
+                </div>
+                <div class="block">
+                    <div class="school" onclick="toggleAchievements('school-achievements', this)">
+                        High School
+                        <img src="./images/education/chevron_right.svg" alt="Icon" class="toggle-icon">
+                    </div>
+                    <div id="school-achievements" class="achievement">
+                        <ul>
+                            <li>Graduated with honors in 2022</li>
+                            <li>President of the Science Club</li>
+                            <li>Participated in regional math olympiad</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="block">
+                    <div class="university" onclick="toggleAchievements('university-achievements', this)">
+                        University
+                        <img src="./images/education/chevron_right.svg" alt="Icon" class="toggle-icon">
+                    </div>
+                    <div id="university-achievements" class="achievement">
+                        <ul>
+                            <li>Bachelor's in Computer Science - 2027</li>
+                            <li>Dean's list for 3 consecutive years</li>
+                            <li>Internship at XYZ Tech Company</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="block">
+                    <div class="academic" onclick="toggleAchievements('academic-achievements', this)">
+                        Academic Achievements
+                        <img src="./images/education/chevron_right.svg" alt="Icon" class="toggle-icon">
+                    </div>
+                    <div id="academic-achievements" class="achievement">
+                        <ul>
+                            <li>Participated for 2 Hacathon</li>
+                            <li>Passed Calculus 2</li>
+                            <li>Participant of Techno Park</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-study">
+        <div class="container">
+            <div class="study__wrapper">
+                <div class="uni__basic">
+                    <div class="uni__name">
+                        Suleyman Demirel University (SDU)
+                    </div>
+                    <div class="uni__info">
+                        <div class="uni__cource">
+                            Second-Year Student, Programming
+                        </div>
+                        <div class="uni__faculty">
+                            Computer Science
+                        </div>
+                        <div class="uni__spec">
+                            Software Engineering
+                        </div>
+                    </div>
+                    
+                    <div class="uni__gpa">
+                        GPA: 2.84 / 4.0
+                    </div>
+                </div>
+
+                
+                <div class="image">
+                    <img src="./images/education/university-removebg-preview.png" alt="University">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+    <script>
+        function toggleAchievements(id, element) {
+            const achievements = document.getElementById(id);
+            const icon = element.querySelector('.toggle-icon');
+            
+            if (achievements.style.display === 'block') {
+                achievements.style.display = 'none';
+                icon.classList.remove('rotate');
+            } else {
+                achievements.style.display = 'block';
+                icon.classList.add('rotate');
+            }
+        }
+    </script>
+</body>
+</html>
